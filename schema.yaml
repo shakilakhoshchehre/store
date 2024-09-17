@@ -1,0 +1,63 @@
+openapi: 3.0.3
+info:
+  title: My API
+  version: 1.0.0
+  description: Test description
+paths:
+  /car/:
+    post:
+      operationId: car_create
+      tags:
+      - car
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /search_car/:
+    get:
+      operationId: search_car_retrieve
+      tags:
+      - search_car
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /student/:
+    post:
+      operationId: student_create
+      tags:
+      - student
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /users/:
+    post:
+      operationId: users_create
+      tags:
+      - users
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
